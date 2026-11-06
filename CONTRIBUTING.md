@@ -31,6 +31,12 @@ leaves it off.
   selection box around the headline's highlighted words.
 - Match the existing code style: no comments explaining *what* the markup does, only *why* when something is genuinely non-obvious.
 
+## Branches
+
+- Work on `test`, or on a feature branch off it. Never push to `main`
+- Changes reach `main` only through a pull request from `test` into `main`, which needs CI to pass and is reviewed and merged by Leo
+- Merging into `main` deploys the site to GitHub Pages; release commits and tags are made on `test` (`git push origin test --tags`) and go live when the pull request is merged
+
 ## Versioning
 
 This project uses [Date Versioning](https://datevers.ing). To release:
